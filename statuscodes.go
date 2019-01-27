@@ -1,8 +1,8 @@
 package rtsp
 
+//go:generate stringer -output statuslines.go -type Status -linecomment
 // Codes as defined in https://tools.ietf.org/html/rfc2326
 
-//go:generate stringer -output statuslines.go -type Status -linecomment
 const (
 	// 1xx
 	StatusContinue Status = 100 // 100 Continue
