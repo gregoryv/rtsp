@@ -12,6 +12,7 @@ func Test_status_descriptions(t *testing.T) {
 		code int
 		exp  string
 	}{
+		{0, "Status(0)"},
 		{100, "100 Continue"},
 		{200, "200 OK"},
 		{201, "201 Created"},
@@ -59,6 +60,6 @@ func Test_status_descriptions(t *testing.T) {
 		{999, "Status(999)"},
 	}
 	for _, c := range cases {
-		assert().Equals(Status(c.code).String(), c.exp)
+		assert().Equals(Status(c.code), c.exp)
 	}
 }
